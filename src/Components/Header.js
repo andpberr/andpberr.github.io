@@ -1,11 +1,17 @@
 import React from 'react';
+import ProjectList from './ProjectList';
 
 function Header() {
   return (
     <nav className="App-header">
-          <button id="btnMain" className="navlink">Andrew's Site</button>
-          <button id="btnProj" className="navlink">Projects</button>
-          <button id="btnCont" className="navlink">Contact</button>
+          <div className="navlink-noclick">Andrew's Site</div>
+          <div id="project-list-container" className="navlink">
+            <div id="btnProj">Projects</div>
+              <div className="dropdown-content">
+                <ProjectList />
+              </div>
+            </div>
+          <div id="btnCont" className="navlink">Contact</div>
     </nav>
   );
 }

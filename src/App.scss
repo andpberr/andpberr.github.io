@@ -1,3 +1,6 @@
+$dark-bg: #282c34;
+$lite-fg: #bbb;
+
 .App {
   text-align: center;
 }
@@ -8,7 +11,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $dark-bg;
   min-height: 10vh;
   display: flex;
   flex-direction: row;
@@ -21,7 +24,7 @@
   width: 100%;
 }
 
-.navlink {
+.navlink, .navlink-noclick {
   color: #bbb;
   background-color: inherit;
   font-size: inherit;
@@ -34,7 +37,6 @@
   align-items: center;
   margin: 8px;
   padding: 4px;
-  cursor: pointer;
 }
 
 .navlink:hover {
@@ -54,5 +56,45 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
-  color: #bbb;
+  color: $lite-fg;
+}
+
+#project-list {
+  background-color: $dark-bg;
+  color: $lite-fg;
+}
+
+#project-list-container {
+  float:left;
+  position:relative;
+}
+
+#project-list-container .dropdown-content {
+  display:none;
+  visibility: hidden;
+  background-color: $dark-bg;
+  color: $lite-fg;
+  position:absolute;
+  z-index:1;
+  min-width:230px;
+  bottom:0px;
+
+}
+
+#project-list-container .dropdown-content .project{
+  position: absolute;
+  float: none;
+  padding: 5px;
+  display:block;
+  font-size:  calc(2px + 2vmin);;
+  text-align: left;
+  background-color: $dark-bg;
+  color: $lite-fg;
+  left:0px;
+  top:0px;
+}
+
+#project-list-container:hover .dropdown-content {
+  display: block;
+  visibility: visible;
 }
