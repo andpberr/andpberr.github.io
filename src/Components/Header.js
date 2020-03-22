@@ -1,17 +1,31 @@
 import React from 'react';
-import ProjectList from './ProjectList';
 
-function Header() {
+function Header(props) {
   return (
     <nav className="App-header">
-          <div className="navlink-noclick">Andrew's Site</div>
-          <div id="project-list-container" className="navlink">
-            <div id="btnProj">Projects</div>
-              <div className="dropdown-content">
-                <ProjectList />
-              </div>
-            </div>
-          <div id="btnCont" className="navlink">Contact</div>
+          <div id="btnHome" className="navlink" onClick={props.homeClick}>
+            <button className="navlink">
+              Andrew's Site
+            </button>
+          </div>
+
+          <div id="btnProj" className="navlink" onClick={props.projClick}>
+            <button className="navlink">
+              Projects
+            </button>
+          </div>
+
+          <div id="btnResu" className="navlink" onClick={props.resuClick}>
+            <button className="navlink">
+              Resume
+            </button>
+          </div>
+
+          <div id="btnCont" className="navlink" onClick={props.contClick}>
+            <button className="navlink">
+              Contact
+            </button>
+          </div>
     </nav>
   );
 }

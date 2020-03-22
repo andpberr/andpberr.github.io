@@ -19,17 +19,17 @@ $lite-fg: #bbb;
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
-  position: static;
+  position: relative;
   top: 0px;
   width: 100%;
 }
 
-.navlink, .navlink-noclick {
+.navlink {
   color: #bbb;
   background-color: inherit;
   font-size: inherit;
   border: inherit;
-  position: static;
+  position: relative;
   display: flex;
   flex-direction: row;
   text-decoration: none;
@@ -37,6 +37,7 @@ $lite-fg: #bbb;
   align-items: center;
   margin: 8px;
   padding: 4px;
+  cursor: pointer;
 }
 
 .navlink:hover {
