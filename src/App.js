@@ -4,6 +4,8 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import MainContent from './Components/MainContent';
 
+const process = require("process");
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,7 @@ class App extends React.Component {
   }
 
   resuClickHandler() {
-    window.open("../resources/Resume_Berry.pdf");
+    window.open(process.env.PUBLIC_URL + "/resources/Resume_Berry.pdf");
   }
 
   render () {
