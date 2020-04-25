@@ -48,7 +48,9 @@ class App extends React.Component {
           resuClick={this.resuClickHandler.bind(this)}
         
         />
-        <MainContent view={this.state.page} />
+        <div id="main-container">
+          <MainContent view={this.state.page} />
+        </div>
         <Footer />
       </div>
     );

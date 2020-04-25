@@ -1,7 +1,9 @@
 $dark-bg: #282c34;
 $lite-fg: #bbb;
+$header-height: 10vh;
 
 .App {
+  display:flex;
   text-align: center;
 }
 
@@ -12,16 +14,18 @@ $lite-fg: #bbb;
 
 .App-header {
   background-color: $dark-bg;
-  min-height: 10vh;
+  min-height: $header-height;
   display: flex;
   flex-direction: row;
   align-items: left;
   justify-content: left;
-  font-size: calc(10px + 2vmin);
+  //font-size: calc(10px + 2vmin);
+  font-size: 3vmin;
   color: white;
-  position: relative;
+  position: fixed;
   top: 0px;
   width: 100%;
+  height: 5vmin;
 }
 
 .navlink {
@@ -54,48 +58,48 @@ $lite-fg: #bbb;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   color: $lite-fg;
 }
 
-#project-list {
-  background-color: $dark-bg;
-  color: $lite-fg;
+pre {
+  display: inline-block;
+  background-color:#ddd;
+  padding:6px;
+  border-radius:4px;
 }
 
-#project-list-container {
-  float:left;
-  position:relative;
+#main-container {
+  display:flex;
+  margin-top: $header-height;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width:100%;
+  flex-direction:column;
 }
 
-#project-list-container .dropdown-content {
-  display:none;
-  visibility: hidden;
-  background-color: $dark-bg;
-  color: $lite-fg;
-  position:absolute;
-  z-index:1;
-  min-width:230px;
-  bottom:0px;
-
+.project-listing {
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  column-gap: 1vw;
+  row-gap: 1vw;
 }
 
-#project-list-container .dropdown-content .project{
-  position: absolute;
-  float: none;
-  padding: 5px;
-  display:block;
-  font-size:  calc(2px + 2vmin);;
-  text-align: left;
-  background-color: $dark-bg;
-  color: $lite-fg;
-  left:0px;
-  top:0px;
+.project-entry {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 10vw;
+  border: 2px solid #2233ff;
+  border-radius: 5px;
+  background-color: #4455ff;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#project-list-container:hover .dropdown-content {
-  display: block;
-  visibility: visible;
+.project-entry:hover {
+  background-color: #6677ff;
 }
