@@ -5,7 +5,7 @@ function Header(props) {
     <nav className="App-header">
           <div id="btnHome" className="navlink" onClick={props.homeClick}>
             <button className="navlink">
-              Andrew's Site
+              Andrew Berry
             </button>
           </div>
 
@@ -18,6 +18,12 @@ function Header(props) {
           <div id="btnResu" className="navlink" onClick={props.resuClick}>
             <button className="navlink">
               Resume
+            </button>
+          </div>
+
+          <div id="btnAbout" className="navlink" onClick={props.abouClick}>
+            <button className="navlink">
+              About
             </button>
           </div>
 
